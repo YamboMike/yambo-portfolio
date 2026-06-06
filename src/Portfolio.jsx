@@ -787,6 +787,7 @@ function HomePage({ dark, setDark, goInv }) {
 
   // ── Search ──────────────────────────────────────────────────────────────────
   const [searchOpen,  setSearchOpen]  = useState(false);
+  const [aboutOpen, setAboutOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const searchRef = useRef(null);
 
@@ -809,7 +810,7 @@ function HomePage({ dark, setDark, goInv }) {
 
   // Close on Escape
   useEffect(() => {
-    const h = (e) => { if (e.key === "Escape") setSearchOpen(false); };
+    const h = (e) => { if (e.key === "Escape") { setSearchOpen(false); setAboutOpen(false); }; };
     window.addEventListener("keydown", h);
     return () => window.removeEventListener("keydown", h);
   }, []);
@@ -828,7 +829,7 @@ function HomePage({ dark, setDark, goInv }) {
         {!isMobile && (
           <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
             {["work","about","contact"].map(id => (
-              <NavPill key={id} onClick={() => go(id)} C={C} dark={dark}>{id}</NavPill>
+              <NavPill key={id} onClick={() => id === 'about' ? setAboutOpen(true) : go(id)} C={C} dark={dark}>{id}</NavPill>
             ))}
             {/* Search button */}
             <button onClick={() => setSearchOpen(true)} title="Search" style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 32, height: 32, borderRadius: 100, background: "transparent", border: `1px solid ${C.border}`, color: C.muted, cursor: "pointer", marginLeft: 4, transition: "border-color .2s, color .2s" }}
@@ -852,6 +853,33 @@ function HomePage({ dark, setDark, goInv }) {
           </div>
         )}
       </nav>
+
+      
+      {/* About modal */}
+      {aboutOpen && (
+        <div onClick={() => setAboutOpen(false)} style={{ position: "fixed", inset: 0, zIndex: 500, background: dark ? "rgba(0,0,0,0.75)" : "rgba(0,0,0,0.4)", backdropFilter: "blur(8px)", WebkitBackdropFilter: "blur(8px)", display: "flex", alignItems: "center", justifyContent: "center", padding: "24px 16px" }}>
+          <div onClick={e => e.stopPropagation()} style={{ width: "100%", maxWidth: 640, background: C.bg, border: `1px solid ${C.border}`, borderRadius: 16, overflow: "hidden", boxShadow: dark ? "0 32px 80px rgba(0,0,0,0.7)" : "0 32px 80px rgba(0,0,0,0.18)", maxHeight: "85vh", overflowY: "auto" }}>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "20px 24px 0" }}>
+              <span style={{ fontSize: 11, color: BRASS, letterSpacing: ".14em", textTransform: "uppercase", fontFamily: sans }}>About</span>
+              <button onClick={() => setAboutOpen(false)} style={{ background: "none", border: `1px solid ${C.border}`, borderRadius: 6, cursor: "pointer", color: C.muted, fontFamily: sans, fontSize: 11, padding: "3px 8px" }}>ESC</button>
+            </div>
+            <div style={{ padding: "16px 24px 0" }}>
+              <h2 style={{ fontFamily: sans, fontSize: "clamp(24px,4vw,34px)", fontWeight: 500, letterSpacing: "-.03em", color: C.ink, margin: 0 }}>Mike Yambo<span style={{ color: BRASS }}>.</span></h2>
+            </div>
+            <div style={{ height: 1, background: C.border, margin: "20px 24px" }} />
+            <div style={{ padding: "0 24px 28px", display: "flex", flexDirection: "column", gap: 16 }}>
+              <p style={{ fontFamily: sans, fontSize: 15, color: C.mid, lineHeight: 1.8, margin: 0 }}>Mike Yambo is an investigative data journalist and OSINT researcher. He previously worked at Nation Media Group as OSINT Lead at the Nation Forensic Unit, and currently works with AFP's digital investigations team.</p>
+              <p style={{ fontFamily: sans, fontSize: 15, color: C.muted, lineHeight: 1.8, margin: 0 }}>His work focuses on forensic journalism spanning visual investigations, misinformation, conflict reporting, munitions research and accountability journalism — bridging traditional reporting and the tools of the digital age.</p>
+              <p style={{ fontFamily: sans, fontSize: 15, color: C.muted, lineHeight: 1.8, margin: 0 }}>He is an award-winning journalist, lead investigator for Brothers in Arms — a cross-border Bellingcat collaboration on arms supply to Sudan — recognised with the Best Investigative Story award at the 2026 Annual Media Excellence Awards.</p>
+              <p style={{ fontFamily: sans, fontSize: 15, color: C.muted, lineHeight: 1.8, margin: 0 }}>Mike believes rigorous, evidence-based journalism helps citizens understand power, conflict, and information ecosystems. He is passionate about open-source methods and making complex investigations accessible to wider audiences.</p>
+              <div style={{ marginTop: 8, padding: "14px 18px", background: dark ? "rgba(201,168,76,0.08)" : "rgba(201,168,76,0.07)", border: `1px solid ${BRASS_BDR}`, borderRadius: 10 }}>
+                <p style={{ fontFamily: sans, fontSize: 13, color: C.muted, lineHeight: 1.7, margin: 0 }}><span style={{ color: BRASS, fontWeight: 500 }}>Available for</span> — collaborations, fellowships, training programs, and speaking engagements on OSINT, digital investigations, misinformation, and investigative journalism.</p>
+              </div>
+              <a href="mailto:yambomike@proton.me" style={{ display: "inline-flex", alignItems: "center", gap: 6, marginTop: 4, fontFamily: sans, fontSize: 13, color: BRASS, textDecoration: "none", fontWeight: 500 }}>Get in touch →</a>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Search overlay */}
       {searchOpen && (
