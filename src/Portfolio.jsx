@@ -828,7 +828,7 @@ function HomePage({ dark, setDark, goInv }) {
         </NavPill>
         {!isMobile && (
           <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
-            {["work","about","contact"].map(id => (
+            {["work","who is mike?"].map(id => (
               <NavPill key={id} onClick={() => id === 'about' ? setAboutOpen(true) : go(id)} C={C} dark={dark}>{id}</NavPill>
             ))}
             {/* Search button */}
@@ -961,15 +961,16 @@ function HomePage({ dark, setDark, goInv }) {
       {menuOpen && (
         <div style={{ position: "fixed", top: 52, left: 0, right: 0, bottom: 0, zIndex: 190, background: C.bg, display: "flex", flexDirection: "column", transition: "background 0.3s", overflowY: "auto" }}>
           <div style={{ padding: "20px 24px 32px", display: "flex", flexDirection: "column", flex: 1 }}>
-            {["work","about","contact"].map((id, i) => (
+            {["work","who is mike?"].map((id, i) => (
               <button key={id} onClick={() => go(id)} style={{
                 display: "block", width: "100%", background: "none", border: "none",
-                borderBottom: i < 2 ? `1px solid ${C.border}` : "none",
+                borderBottom: `1px solid ${C.border}`,
                 padding: "16px 0", cursor: "pointer", fontFamily: sans,
                 fontSize: 28, fontWeight: 500, letterSpacing: "-.03em",
                 color: C.ink, textAlign: "left",
               }}>{id}</button>
             ))}
+            <button onClick={() => { goScoop(); setMenu(false); }} style={{ display: "block", width: "100%", background: "none", border: "none", borderBottom: "none", padding: "16px 0", cursor: "pointer", fontFamily: sans, fontSize: 28, fontWeight: 500, letterSpacing: "-.03em", color: BRASS, textAlign: "left" }}>latest scoop</button>
           </div>
         </div>
       )}
