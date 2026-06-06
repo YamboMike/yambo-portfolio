@@ -1147,7 +1147,7 @@ function HomePage({ dark, setDark, goInv }) {
         @keyframes chevronBounce { 0%,100% { transform:translateY(0); opacity:1; } 50% { transform:translateY(5px); opacity:.5; } }
         @keyframes cursorBlink { 0%,100% { opacity:1; } 50% { opacity:0; } }
         @keyframes pinPulse    { 0% { r:8; opacity:.5; } 70% { r:22; opacity:0; } 100% { r:8; opacity:0; } }
-        * { box-sizing: border-box; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; }
       `}</style>
     </div>
