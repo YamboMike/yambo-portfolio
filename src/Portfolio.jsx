@@ -763,7 +763,7 @@ function HeroPeriod({ dark }) {
 
 // ─── Home page ────────────────────────────────────────────────────────────────
 
-function HomePage({ dark, setDark, goInv }) {
+function HomePage({ dark, setDark, goInv, goScoop }) {
   const C = getC(dark);
   const width    = useWindowWidth();
   const isMobile = width < SM;
@@ -1178,5 +1178,5 @@ export default function App() {
   }, []);
 
   if (page === "investigations") return <InvestigationsPage dark={dark} setDark={setDark} goHome={goHome} />;
-  return <HomePage dark={dark} setDark={setDark} goInv={goInv} />;
+  return <HomePage dark={dark} setDark={setDark} goInv={goInv} goScoop={goScoop} />;
 }
