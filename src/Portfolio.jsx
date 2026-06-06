@@ -1165,7 +1165,8 @@ export default function App() {
       : false
   );
 
-  const goInv  = () => { setPage("investigations"); window.scrollTo(0, 0); };
+  const goInv   = () => { setPage("investigations"); window.scrollTo(0, 0); };
+  const goScoop = () => { setPage("scoop");           window.scrollTo(0, 0); };
   const goHome = () => { setPage("home");           window.scrollTo(0, 0); };
 
   useEffect(() => {
@@ -1178,5 +1179,6 @@ export default function App() {
   }, []);
 
   if (page === "investigations") return <InvestigationsPage dark={dark} setDark={setDark} goHome={goHome} />;
+  if (page === "scoop")           return <LatestScoopPage dark={dark} setDark={setDark} goHome={goHome} />;
   return <HomePage dark={dark} setDark={setDark} goInv={goInv} goScoop={goScoop} />;
 }
