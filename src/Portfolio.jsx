@@ -857,8 +857,8 @@ function HomePage({ dark, setDark, goInv }) {
       
       {/* About modal */}
       {aboutOpen && (
-        <div onClick={() => setAboutOpen(false)} style={{ position: "fixed", inset: 0, zIndex: 500, background: dark ? "rgba(0,0,0,0.75)" : "rgba(0,0,0,0.4)", backdropFilter: "blur(8px)", WebkitBackdropFilter: "blur(8px)", display: "flex", alignItems: "center", justifyContent: "center", padding: "24px 16px" }}>
-          <div onClick={e => e.stopPropagation()} style={{ width: "100%", maxWidth: 640, background: C.bg, border: `1px solid ${C.border}`, borderRadius: 16, overflow: "hidden", boxShadow: dark ? "0 32px 80px rgba(0,0,0,0.7)" : "0 32px 80px rgba(0,0,0,0.18)", maxHeight: "85vh", overflowY: "auto" }}>
+        <div onClick={() => setAboutOpen(false)} style={{ position: "fixed", inset: 0, zIndex: 500, background: dark ? "rgba(0,0,0,0.75)" : "rgba(0,0,0,0.4)", backdropFilter: "blur(8px)", WebkitBackdropFilter: "blur(8px)", display: "flex", alignItems: "flex-end", justifyContent: "center", padding: "0", paddingTop: "60px" }}>
+          <div onClick={e => e.stopPropagation()} style={{ width: "100%", maxWidth: 640, background: C.bg, border: `1px solid ${C.border}`, borderRadius: "16px 16px 0 0", overflow: "hidden", boxShadow: dark ? "0 32px 80px rgba(0,0,0,0.7)" : "0 32px 80px rgba(0,0,0,0.18)", maxHeight: "90vh", overflowY: "auto" }}>
             <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "20px 24px 0" }}>
               <span style={{ fontSize: 11, color: BRASS, letterSpacing: ".14em", textTransform: "uppercase", fontFamily: sans }}>About</span>
               <button onClick={() => setAboutOpen(false)} style={{ background: "none", border: `1px solid ${C.border}`, borderRadius: 6, cursor: "pointer", color: C.muted, fontFamily: sans, fontSize: 11, padding: "3px 8px" }}>ESC</button>
