@@ -1,0 +1,142 @@
+{
+  "categories": [
+    {
+      "id": "conflict",
+      "label": "Conflict & War",
+      "desc": "Weapons tracing, frontline documentation, and investigation of armed actors across Africa.",
+      "items": [
+        {
+          "title": "Exposed: Kenya's Arms in Sudan War",
+          "desc": "Six-month investigation with Bellingcat uncovering Kenyan-branded ammunition inside an alleged RSF depot in war-ravaged Khartoum.",
+          "href": "https://nation.africa/kenya/news/-kenya-s-arms-in-sudan-war--5082748",
+          "tags": ["Weapons", "OSINT", "Sudan"],
+          "pub": "Nation Media × Bellingcat",
+          "year": "2025",
+          "featured": true
+        },
+        {
+          "title": "Investigating Tanzania's Protest Killings",
+          "desc": "Open-source geolocation of footage from Tanzania's Gen Z protests — pinpointing exact locations of documented killings.",
+          "href": "https://nation.africa/kenya/news/blood-on-the-streets-open-source-data-shows-locations-of-killings-during-tanzania-protests-5261036",
+          "tags": ["Geolocation", "Conflict", "OSINT"],
+          "pub": "Nation Media Group",
+          "year": "2024",
+          "featured": true
+        },
+        {
+          "title": "Sudan's Forgotten War",
+          "desc": "On-the-ground and open-source reporting on Sudan's internal conflict at its most devastating phase.",
+          "href": "https://nation.africa/africa/news/look-the-fire-is-inside-your-houses-where-are-you-sudan-s-war-within-4683754",
+          "tags": ["Conflict", "Sudan"],
+          "pub": "Nation Media Group",
+          "year": "2023",
+          "featured": false
+        },
+        {
+          "title": "From Nyala to Omdurman: Sudan's Ageing Air Fleet Destroyed",
+          "desc": "Tracing the destruction of Sudan's air force across multiple airbases using satellite imagery and open-source flight data.",
+          "href": "https://3ayin.com/en/safplanes/",
+          "tags": ["Aviation OSINT", "Sudan", "Satellite"],
+          "pub": "Ayin Network",
+          "year": "2024",
+          "featured": false
+        },
+        {
+          "title": "How Armed Drones Are Redefining Warfare in Africa",
+          "desc": "Analysis of the proliferation of armed drone technology and its impact on conflict dynamics across East Africa.",
+          "href": "https://www.theeastafrican.co.ke/tea/news/east-africa/how-armed-drones-are-rewriting-east-africa-frontlines-5216048",
+          "tags": ["Weapons", "Conflict", "Analysis"],
+          "pub": "The EastAfrican",
+          "year": "2024",
+          "featured": false
+        },
+        {
+          "title": "Beyond the Shadows: Tracking Bandits in Kainuk, West Pokot",
+          "desc": "Mapping armed banditry patterns in West Pokot using satellite imagery, community data, and movement analysis.",
+          "href": "https://nation.africa/kenya/news/tracking-suspected-bandits-in-kainuk-west-pokot-4477188",
+          "tags": ["Mapping", "OSINT", "Conflict"],
+          "pub": "Nation Media Group",
+          "year": "2023",
+          "featured": false
+        },
+        {
+          "title": "The Digital Footprints of a Suspected al-Shabaab Financier",
+          "desc": "Digital forensic investigation tracing the online and financial networks of a suspected al-Shabaab-linked individual.",
+          "href": "https://nation.africa/kenya/news/the-digital-footprints-of-suspected-shabaab-financier-4391768",
+          "tags": ["Digital Forensics", "Conflict"],
+          "pub": "Nation Media Group",
+          "year": "2023",
+          "featured": false
+        }
+      ]
+    },
+    {
+      "id": "accountability",
+      "label": "Accountability & Rights",
+      "desc": "Holding institutions, governments, and individuals to account through data and open-source evidence.",
+      "items": [
+        {
+          "title": "Eight Hours of Rage",
+          "desc": "Minute-by-minute reconstruction of how Kenya's Finance Bill protests escalated into the storming of Parliament — built from verified footage and crowd movement analysis.",
+          "href": "https://nation.africa/kenya/news/eight-hours-of-rage-how-the-finance-bill-2024-led-to-kenya-s-parliament-invasion-4744254",
+          "tags": ["OSINT", "Accountability", "Kenya"],
+          "pub": "Nation Media Group",
+          "year": "2024",
+          "featured": true
+        },
+        {
+          "title": "Excessive Force: Geolocating Viral Video of Police Beating",
+          "desc": "Pinpointing the exact location of a viral video showing police beating a civilian — using building geometry, signage, and shadow analysis.",
+          "href": "https://nation.africa/kenya/news/finding-the-location-of-viral-video-of-man-beaten-by-police-4304224",
+          "tags": ["Geolocation", "Accountability"],
+          "pub": "Nation Media Group",
+          "year": "2023",
+          "featured": false
+        },
+        {
+          "title": "Shakahola Forest: Satellite Imagery of the 'Death Triangle'",
+          "desc": "Satellite imagery analysis revealing the layout of the Shakahola cult compound where hundreds of followers died.",
+          "href": "https://nation.africa/kenya/news/shakahola-forest-satellite-imagery-analysis-reveals-key-details-of-the-death-triangle--4234794",
+          "tags": ["Satellite", "Accountability", "Kenya"],
+          "pub": "Nation Media Group",
+          "year": "2023",
+          "featured": false
+        },
+        {
+          "title": "Doctors on Strike: Coordinated Attack Patterns on X",
+          "desc": "SOCMINT analysis revealing hallmarks of coordinated inauthentic behaviour targeting Kenya's doctors' strike hashtags.",
+          "href": "https://nation.africa/kenya/news/doctors-on-strike-x-s-hashtag-analysis-bears-hallmarks-of-coordinated-online-attacks-4584722",
+          "tags": ["SOCMINT", "Accountability"],
+          "pub": "Nation Media Group",
+          "year": "2024",
+          "featured": false
+        }
+      ]
+    },
+    {
+      "id": "osint-tools",
+      "label": "OSINT & Open Data",
+      "desc": "Investigations powered by satellite imagery, aviation data, geolocation, and automated pipelines.",
+      "items": [
+        {
+          "title": "Final Approach: Kisumu Airport Surge During Raila's Burial",
+          "desc": "Data analysis of unprecedented air traffic into Kisumu during Raila Odinga's burial — tracking flight paths and passenger volume.",
+          "href": "https://nation.africa/kenya/news/final-approach-inside-kisumu-airport-unprecedented-air-traffic-surge-during-raila-odinga-s-burial-5250856",
+          "tags": ["Aviation OSINT", "Data"],
+          "pub": "Nation Media Group",
+          "year": "2025",
+          "featured": false
+        },
+        {
+          "title": "The Anatomy of Deadly Mai Mahiu Flash Floods",
+          "desc": "Satellite and hydrological data analysis revealing the environmental and infrastructural factors behind Kenya's deadliest flash floods.",
+          "href": "https://nation.africa/kenya/news/the-anatomy-of-deadly-mai-mahiu-flash-floods-4626230",
+          "tags": ["Satellite", "Data", "Kenya"],
+          "pub": "Nation Media Group",
+          "year": "2024",
+          "featured": false
+        }
+      ]
+    }
+  ]
+}
